@@ -12,8 +12,7 @@ jobs:
         run: aws --version
       - name: Read the credentials.csv file
         run: |
-         aws --version
-         aws --version
-         aws --version
-         aws --version
-         aws --version
+         echo Hello, who am I talking to?
+         read varname
+         santichoks
+         echo It\'s nice to meet you $varname
