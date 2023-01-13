@@ -12,4 +12,4 @@ jobs:
      AWS_DEFAULT_REGION: us-west-2
      AWS_DEFAULT_OUTPUT: json
     steps:
-      - run: aws --version
+      - run: aws configure
