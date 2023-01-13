@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run a one-line script
-        run: |
-         aws --version
-         aws configure import --csv credentials.csv
+      - name: Check the AWS version
+        run: aws --version
+      - name: Read the credentials.csv file.
+        run: cat credentials.csv
