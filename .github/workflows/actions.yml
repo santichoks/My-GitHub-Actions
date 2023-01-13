@@ -7,9 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-     AWS_ACCESS_KEY_ID: AKIAIOSFODNN7EXAMPLE
-     AWS_SECRET_ACCESS_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-     AWS_DEFAULT_REGION: us-west-2
+     AWS_ACCESS_KEY_ID: AKIAS4S7O4H2VGOMGG7X
+     AWS_SECRET_ACCESS_KEY: 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
+     AWS_DEFAULT_REGION: us-east-1
      AWS_DEFAULT_OUTPUT: json
     steps:
       - run: aws sts get-caller-identity
