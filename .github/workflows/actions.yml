@@ -11,8 +11,9 @@ jobs:
       - name: Check the AWS version
         run: aws --version
       - name: Read the credentials.csv file
-        run: |
-         echo Hello, who am I talking to?
-         read varname
-         santichoks
-         echo It\'s nice to meet you $varname
+        env:
+         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+         AWS_DEFAULT_REGION: eu-west-1
+         AWS_DEFAULT_OUTPUT: json
+        run: aws config
