@@ -12,6 +12,8 @@ jobs:
         run: aws --version
       - name: Read the credentials.csv file
         run: |
-         aws configure
-         AKIAS4S7O4H2VGOMGG7X
-         2asSnr5C3OfSS5VZWg/0TjwyQk2S8Ma3oVc0+7P7
+         aws --version
+         aws --version
+         aws --version
+         aws --version
+         aws --version
