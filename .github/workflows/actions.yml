@@ -6,11 +6,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+     AWS_ACCESS_KEY_ID: AKIAIOSFODNN7EXAMPLE
+     AWS_SECRET_ACCESS_KEY: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+     AWS_DEFAULT_REGION: us-west-2
+     AWS_DEFAULT_OUTPUT: json
     steps:
       - uses: actions/checkout@v3
       - name: Check the AWS version
-        run: aws --version
-      - name: Get the credentials.csv file
-        run: aws configure import --csv file://credentials.csv
-      - name: AWS help
-        run: aws help
+        run: aws configure
