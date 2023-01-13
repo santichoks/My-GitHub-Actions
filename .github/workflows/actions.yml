@@ -14,4 +14,4 @@ jobs:
     steps:
       - run: | 
          aws sts get-caller-identity
-         aws list-clusters
+         aws eks list-clusters
