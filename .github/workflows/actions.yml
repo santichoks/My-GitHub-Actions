@@ -12,5 +12,5 @@ jobs:
         run: aws --version
       - name: Get the credentials.csv file
         run: aws configure import --csv file://credentials.csv
-      - name: Get profile
-        run: aws configure get aws_access_key_id
+      - name: AWS help
+        run: aws help
