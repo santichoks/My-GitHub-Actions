@@ -1,2 +1,2 @@
 # My-GitHub-Action
-This repo is used to test Github actions
+<h2>This repo is used to test Github actions</h2>
