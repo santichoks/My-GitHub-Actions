@@ -13,8 +13,8 @@ jobs:
       AWS_DEFAULT_OUTPUT: json
     steps:
       - name: Clusters list
-        run: | 
+        run: |
+          aws --version
           aws sts get-caller-identity
           aws eks list-clusters
-          aws eks update-kubeconfig --region $AWS_DEFAULT_REGION --name minecluster
-          kubectl get svc
+          aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name minecluster
