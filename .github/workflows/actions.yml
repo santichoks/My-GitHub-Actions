@@ -14,10 +14,7 @@ jobs:
     steps:
       - name: Clusters list
         run: |
-          aws --version
           aws sts get-caller-identity
-          aws eks list-clusters
           aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name minecluster
           aws eks update-kubeconfig --name minecluster --region $AWS_DEFAULT_REGION --role-arn arn:aws:iam::198842442229:user/eks-user
-          kubectl auth can-i get svc
-          kubectl auth can-i create pods --all-namespaces
+          kubectl get svc
