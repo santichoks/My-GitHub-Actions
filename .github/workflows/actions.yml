@@ -15,4 +15,5 @@ jobs:
       - name: Clusters list
         run: |
           aws sts get-caller-identity
+          aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name k8s-cluster --role-arn arn:aws:iam::198842442229:role/EKSClusterRole
           cat ~/.kube/config
