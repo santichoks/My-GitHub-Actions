@@ -18,3 +18,4 @@ jobs:
           aws sts get-caller-identity
           aws eks list-clusters
           aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name minecluster
+          kubectl get pods --kubeconfig ./.kube/config
