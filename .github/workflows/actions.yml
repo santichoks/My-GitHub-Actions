@@ -16,3 +16,5 @@ jobs:
         run: | 
           aws sts get-caller-identity
           aws eks list-clusters
+          aws eks update-kubeconfig --region $AWS_DEFAULT_REGION --name minecluster
+          kubectl get svc
