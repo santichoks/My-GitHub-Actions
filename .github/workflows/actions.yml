@@ -14,4 +14,4 @@ jobs:
     steps:
       - name: Clusters list
         run: |
-          aws --version
+          aws sts get-caller-identity
