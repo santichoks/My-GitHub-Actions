@@ -15,7 +15,6 @@ jobs:
       - name: Clusters list
         run: |
           aws sts get-caller-identity
-          aws sts get-caller-identity
           aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name minecluster
           aws eks update-kubeconfig --name minecluster --region $AWS_DEFAULT_REGION --role-arn arn:aws:iam::198842442229:user/eks-user
           kubectl get svc
